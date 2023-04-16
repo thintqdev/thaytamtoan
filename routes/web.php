@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\Auth\LoginController as AdminLoginController;
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Admin
+// Router Authentication
+Route::get('/login', [AdminLoginController::class, 'showLoginFormController']);
+Route::post('/login', [AdminLoginController::class, 'LoginController'])->name('admin.login');
+
+// Home/Dashboard
+Route::get('/admin/dashboard', [DashboardController::class, 'show'])->name('dashboard');
