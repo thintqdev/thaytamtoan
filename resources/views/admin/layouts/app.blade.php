@@ -21,15 +21,24 @@
 
 <body>
     <div id="app">
-        @yield('content')
+        @section('sidebar')
+            @include('admin.components.sidebar')
+        @show
+        <div id="main">
+            @section('header')
+                @include('admin.partials.header')
+            @show
+
+            @yield('content')
+
+            @section('footer')
+                @include('admin.components.footer')
+            @show
+        </div>
     </div>
 
     <script src="{{ asset('vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-
-    <script src="{{ asset('vendors/apexcharts/apexcharts.js') }}"></script>
-    <script src="{{ asset('js/pages/dashboard.js') }}"></script>
-
     <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
