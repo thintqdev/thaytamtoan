@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Page Title')
+@section('title', 'Dashboard')
 
 @section('content')
-    <p>This is my body content.</p>
+    <p>This is dashboard page</p>
 @endsection
