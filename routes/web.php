@@ -37,7 +37,14 @@ Route::prefix('/admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // Class/Group
-    Route::get('/groups', [GroupController::class, 'index'])->name('group');
+    Route::prefix('groups')->controller(GroupController::class)->group(function () {
+        Route::post('/', 'create')->name('group.create');
+        Route::delete('/{id}', 'destroy')->name('group.delete');
+        Route::get('/', 'index')->name('group.list');
+        Route::get('/{id}/edit', 'edit')->name('group.edit');
+        Route::put('/{id}', 'update')->name('group.update');
+        Route::get('/{id}', 'show')->name('group.detail');
+    });
 
     // Student/User
     Route::get('/users', [AdminUserController::class, 'index'])->name('user');
