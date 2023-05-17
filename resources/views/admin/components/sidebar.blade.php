@@ -25,7 +25,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="{{ route('group') }}" class='sidebar-link'>
+                    <a href="{{ route('group.list') }}" class='sidebar-link'>
                         <i class="bi bi-briefcase"></i>
                         <span>Quản lý lớp học</span>
                     </a>

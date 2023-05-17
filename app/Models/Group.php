@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Group extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'description',
+        'quantity'
+    ];
+
+    public function schedules()
+    {
+        return $this->hasMany(Schedule::class);
+    }
 }

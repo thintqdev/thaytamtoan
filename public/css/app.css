@@ -1279,3 +1279,24 @@ a {
 .icon-mid:before {
     vertical-align: middle;
 }
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.schedule-item {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.schedule-item h4 {
+    margin: 0;
+    font-weight: normal;
+}
+
+.schedule-item p {
+    margin: 0;
+    font-size: 0.9rem;
+}

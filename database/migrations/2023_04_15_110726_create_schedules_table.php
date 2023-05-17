@@ -17,8 +17,8 @@ return new class extends Migration
             $table->increments('id');
             $table->unsignedInteger('group_id')->nullable();
             $table->foreign('group_id')->references('id')->on('groups')->onDelete('cascade');
-            $table->dateTime('start_time');
-            $table->dateTime('end_time');
+            $table->time('start_time');
+            $table->time('end_time');
             $table->tinyInteger('day_of_week');
             $table->timestamps();
         });

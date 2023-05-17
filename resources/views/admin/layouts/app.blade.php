@@ -9,28 +9,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-
     <link rel="stylesheet" href="{{ asset('vendors/iconly/bold.css') }}">
-
     <link rel="stylesheet" href="{{ asset('vendors/perfect-scrollbar/perfect-scrollbar.css') }}">
     <link rel="stylesheet" href="{{ asset('vendors/bootstrap-icons/bootstrap-icons.css') }}">
     <link rel="shortcut icon" href={{ asset('images/favicon.svg') }} type="image/x-icon">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
     <title> @yield('title') - Thầy Tâm toán</title>
 </head>
 
 <body>
+    @section('header')
+        @include('admin.components.header')
+    @show
     <div id="app">
         @section('sidebar')
             @include('admin.components.sidebar')
         @show
         <div id="main">
-            @section('header')
-                @include('admin.partials.header')
-            @show
-
             @yield('content')
-
             @section('footer')
                 @include('admin.components.footer')
             @show
