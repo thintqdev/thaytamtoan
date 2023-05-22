@@ -62,7 +62,15 @@ Route::prefix('/admin')->group(function () {
     Route::get('/news', [NewsController::class, 'index'])->name('news');
 
     // Categories
-    Route::get('/categories', [CategoryController::class, 'index'])->name('category');
+    Route::get('categories/get-categories', [CategoryController::class, 'getCategories']);
+    Route::resource('categories', CategoryController::class)->names([
+        'index' => 'category.list',
+        'store' => 'category.create',
+        'show' => 'category.show',
+        'edit' => 'category.edit',
+        'update' => 'category.update',
+        'destroy' => 'category.destroy',
+    ]);
 
     // Quotes
     Route::get('/quotes', [QuoteController::class, 'index'])->name('quote');

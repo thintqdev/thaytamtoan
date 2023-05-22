@@ -56,7 +56,7 @@
                 </li>
 
                 <li class="sidebar-item">
-                    <a href="{{ route('category') }}" class='sidebar-link'>
+                    <a href="{{ route('category.list') }}" class='sidebar-link'>
                         <i class="bi bi-card-list"></i>
                         <span>Quản lý danh mục</span>
                     </a>
