@@ -50,7 +50,15 @@ Route::prefix('/admin')->group(function () {
     Route::get('/users', [AdminUserController::class, 'index'])->name('user');
 
     // Documents
-    Route::get('/documents', [DocumentController::class, 'index'])->name('document');
+    Route::resource('documents', DocumentController::class)->names([
+        'index' => 'document.list',
+        'create' => 'document.create_form',
+        'store' => 'document.create',
+        'show' => 'document.show',
+        'edit' => 'document.edit',
+        'update' => 'document.update',
+        'destroy' => 'document.destroy',
+    ]);
 
     // Exams
     Route::get('/exams', [ExamController::class, 'index'])->name('exam');

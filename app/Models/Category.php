@@ -31,4 +31,9 @@ class Category extends Model
             return !is_null($this->category) ? $this->category->name : null;
         });
     }
+
+    public function documents()
+    {
+        return $this->hasMany(Document::class);
+    }
 }

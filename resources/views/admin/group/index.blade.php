@@ -11,7 +11,8 @@
                     <h4 class="card-title">Danh sách lớp học</h4>
                 </div>
                 <button type="button" data-bs-toggle="modal" data-bs-target="#modal-add-group"
-                    class="btn btn-primary float-end"><i class="bi bi-plus-circle"></i> Thêm lớp học</button>
+                    class="btn btn-primary float-end"><i class="bi bi-plus-circle"></i> Thêm lớp học
+                </button>
             </div>
             <div class="card-body">
                 <table class="table table-striped">

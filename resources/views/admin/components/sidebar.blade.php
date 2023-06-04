@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="{{ route('document') }}" class='sidebar-link'>
+                    <a href="{{ route('document.list') }}" class='sidebar-link'>
                         <i class="bi bi-file-earmark-text"></i>
                         <span>Quản lý tài liệu</span>
                     </a>
