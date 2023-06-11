@@ -29,10 +29,8 @@
                                 <td>{{ $category->slug }}</td>
                                 <td>{{ $category->parent_name }}</td>
                                 <td>
-                                    {{-- <a href="{{ route('category.edit', ['id' => $category->id]) }}"<span
-                                        class="badge bg-warning">Sửa</span></a> --}}
                                     <button type="button" data-bs-target="#modal-delete-category" data-bs-toggle="modal"
-                                        data-category-id="{{ $category->id }}" class="badge bg-danger">Xoá</button>
+                                        data-category-id="{{ $category->id }}" class="badge bg-danger borderless">Xoá</button>
                                 </td>
                             </tr>
                         @endforeach

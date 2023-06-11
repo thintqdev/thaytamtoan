@@ -61,7 +61,15 @@ Route::prefix('/admin')->group(function () {
     ]);
 
     // Exams
-    Route::get('/exams', [ExamController::class, 'index'])->name('exam');
+    Route::resource('exams', ExamController::class)->names([
+        'index' => 'exam.list',
+        'create' => 'exam.create_form',
+        'store' => 'exam.create',
+        'show' => 'exam.show',
+        'edit' => 'exam.edit',
+        'update' => 'exam.update',
+        'destroy' => 'exam.destroy',
+    ]);
 
     // Notification
     Route::get('/notifications', [NotificationController::class, 'index'])->name('notification');

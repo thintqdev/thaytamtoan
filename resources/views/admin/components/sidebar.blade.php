@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="{{ route('exam') }}" class='sidebar-link'>
+                    <a href="{{ route('exam.list') }}" class='sidebar-link'>
                         <i class="bi bi-vector-pen"></i>
                         <span>Quản lý đề thi</span>
                     </a>

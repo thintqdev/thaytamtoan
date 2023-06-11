@@ -33,4 +33,9 @@ return [
         realpath(storage_path('framework/views'))
     ),
 
+    'exam' => [
+        'total_question' => [10, 40, 50],
+        'duration' => [15, 45, 90, 120]
+    ]
+
 ];
