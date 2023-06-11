@@ -42,16 +42,11 @@
                             {{ $document->category->name }}
                         </td>
                         <td>
-                            <a href="{{ route('document.show', ['document' => $document]) }}"
-                                <span class="badge bg-success">Xem</span>
+                            <a href="{{ route('document.show', ['document' => $document]) }}" <span class="badge bg-success">Xem</span>
                             </a>
-                            <a href="{{ route('document.edit', ['document' => $document]) }}"
-                                 <span class="badge bg-warning">Sửa</span>
+                            <a href="{{ route('document.edit', ['document' => $document]) }}" <span class="badge bg-warning">Sửa</span>
                             </a>
-                            <button type="button" data-bs-target="#modal-delete-document"
-                            data-bs-toggle="modal"
-                            data-document-id="{{ $document->id }}"
-                            class="badge bg-danger">Xoá</button>
+                            <button type="button" data-bs-target="#modal-delete-document" data-bs-toggle="modal" data-document-id="{{ $document->id }}" class="badge bg-danger borderless">Xoá</button>
                         </td>
                     </tr>
                     @endforeach
@@ -61,36 +56,35 @@
     </div>
 </section>
 
-<div class="modal fade text-left" id="modal-delete-document" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
-            <form>
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="myModalLabel1">Xoá tài liệu</h5>
-                        <button type="button" class="close rounded-pill" data-bs-dismiss="modal" aria-label="Close">
-                            <i data-feather="x"></i>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            Tài liệu xoá sẽ không khôi phục được, bạn có chắn chắn xoá?
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn" data-bs-dismiss="modal">
-                            <i class="bx bx-x d-block d-sm-none"></i>
-                            <span class="d-none d-sm-block">Đóng</span>
-                        </button>
-                        <button type="button" class="btn btn-danger ml-1" data-bs-dismiss="modal" id="confirmDelete">
-                            <i class="bx bx-check d-block d-sm-none"></i>
-                            <span class="d-none d-sm-block">OK</span>
-                        </button>
-                    </div>
+<div class="modal fade text-left" id="modal-delete-document" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <form>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel1">Xoá tài liệu</h5>
+                    <button type="button" class="close rounded-pill" data-bs-dismiss="modal" aria-label="Close">
+                        <i data-feather="x"></i>
+                    </button>
                 </div>
-            </form>
-        </div>
+                <div class="modal-body">
+                    <p>
+                        Tài liệu xoá sẽ không khôi phục được, bạn có chắn chắn xoá?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">
+                        <i class="bx bx-x d-block d-sm-none"></i>
+                        <span class="d-none d-sm-block">Đóng</span>
+                    </button>
+                    <button type="button" class="btn btn-danger ml-1" data-bs-dismiss="modal" id="confirmDelete">
+                        <i class="bx bx-check d-block d-sm-none"></i>
+                        <span class="d-none d-sm-block">OK</span>
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
+</div>
 
-    <script src="{{ asset('js/pages/document/document.js') }}"></script>
+<script src="{{ asset('js/pages/document/document.js') }}"></script>
 @endsection

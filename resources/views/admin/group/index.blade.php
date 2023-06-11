@@ -61,7 +61,7 @@
                                     <a href="{{ route('group.edit', ['id' => $group->id]) }}"<span
                                         class="badge bg-warning">Sửa</span></a>
                                     <button type="button" data-bs-target="#modal-delete-group" data-bs-toggle="modal"
-                                        data-group-id="{{ $group->id }}" class="badge bg-danger">Xoá</button>
+                                        data-group-id="{{ $group->id }}" class="badge bg-danger borderless">Xoá</button>
 
                                 </td>
                             </tr>

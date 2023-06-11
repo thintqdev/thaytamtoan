@@ -1604,3 +1604,11 @@ a {
     margin: 0;
     font-size: 0.9rem;
 }
+
+.borderless {
+    border: none;
+}
+
+.borderless:hover {
+    color: #00391c;
+}
