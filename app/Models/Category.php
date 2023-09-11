@@ -32,7 +32,7 @@ class Category extends Model
         });
     }
 
-    public function documents()
+    public function questions()
     {
         return $this->hasMany(Document::class);
     }

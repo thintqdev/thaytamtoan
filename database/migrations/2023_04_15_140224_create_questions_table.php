@@ -17,6 +17,10 @@ return new class extends Migration
             $table->increments('id');
             $table->text('content');
             $table->tinyInteger('level')->comment('1: easy, 2: medium, 3:hard, 4:very hard');
+            $table->unsignedInteger('exam_id')->nullable();
+            $table->foreign('exam_id')->references('id')->on('exams')->onDelete('cascade');
+            $table->unsignedInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

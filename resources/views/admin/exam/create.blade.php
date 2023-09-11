@@ -54,7 +54,7 @@
                             <div class="col">
                                 <div class="form-group">
                                     <label> Kết thúc </label>
-                                    <input type="datetime-local" class="form-control" name="ended_at"/ >
+                                    <input type="datetime-local" class="form-control" name="ended_at" />
                                 </div>
                             </div>
                         </div>

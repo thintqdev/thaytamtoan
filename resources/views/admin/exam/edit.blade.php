@@ -66,6 +66,7 @@
                     </div>
                     <div class="modal-footer">
                         <a href="{{ route('exam.list') }}" class="btn btn-secondary">Đóng</a>
+                        <a href="{{ route('question.list', ['exam' => $exam]) }}" class="btn btn-success">Thêm câu hỏi</a>
                         <button type="submit" class="btn btn-primary">Lưu</button>
                     </div>
                 </form>

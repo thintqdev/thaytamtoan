@@ -8,8 +8,10 @@ use App\Http\Controllers\Admin\ExamController;
 use App\Http\Controllers\Admin\GroupController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\NotificationController;
+use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\QuoteController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
+use App\Http\Controllers\ImageUploadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -71,6 +73,17 @@ Route::prefix('/admin')->group(function () {
         'destroy' => 'exam.destroy',
     ]);
 
+    // Questions
+    Route::resource('exams.questions', QuestionController::class)->names([
+        'index' => 'question.list',
+        'create' => 'question.create_form',
+        'store' => 'question.create',
+        'show' => 'question.show',
+        'edit' => 'question.edit',
+        'update' => 'question.update',
+        'destroy' => 'question.destroy',
+    ]);
+
     // Notification
     Route::get('/notifications', [NotificationController::class, 'index'])->name('notification');
 
@@ -91,3 +104,5 @@ Route::prefix('/admin')->group(function () {
     // Quotes
     Route::get('/quotes', [QuoteController::class, 'index'])->name('quote');
 });
+
+Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name('image.upload');

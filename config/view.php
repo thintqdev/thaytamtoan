@@ -36,6 +36,13 @@ return [
     'exam' => [
         'total_question' => [10, 40, 50],
         'duration' => [15, 45, 90, 120]
+    ],
+    'question' => [
+        'level' => [
+            1 => 'Nhận biết',
+            2 => 'Thông hiểu',
+            3 => 'Vận dụng thấp',
+            4 => 'Vận dụng cao'
+        ]
     ]
-
 ];
