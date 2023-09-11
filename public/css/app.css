@@ -1612,3 +1612,7 @@ a {
 .borderless:hover {
     color: #00391c;
 }
+
+.ck-editor__editable {
+    min-height: 500px;
+}

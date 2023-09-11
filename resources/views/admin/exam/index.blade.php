@@ -25,7 +25,7 @@
                         <th class="col-1">Bắt đầu</th>
                         <th class="col-1">Kết thúc</th>
                         <th class="col-1">Trạng thái</th>
-                        <th>Hành động</th>
+                        <th class="col-1">Hành động</th>
 
                     </tr>
                 </thead>
