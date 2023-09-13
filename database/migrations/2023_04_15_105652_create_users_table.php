@@ -19,13 +19,9 @@ return new class extends Migration
             $table->foreign('group_id')->references('id')->on('groups');
             $table->string('full_name');
             $table->string('email')->index()->unique();
+            $table->string('')->index()->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->date('date_of_birth')->nullable();
-            $table->string('address')->nullable();
-            $table->string('phone', 20)->nullable();
-            $table->string('bio')->nullable();
-            $table->string('facebook_url')->nullable();
             $table->string('role_name', 20)->default('student');
             $table->softDeletes();
             $table->rememberToken();
