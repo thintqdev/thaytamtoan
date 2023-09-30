@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\MeController;
 use App\Http\Controllers\Front\AuthController;
+use App\Http\Controllers\Front\CategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -29,6 +31,5 @@ Route::middleware('api.acceptjson')->group(function () {
                 Route::put('', 'updateMe');
             });
     });
+    Route::get('/categories', [CategoryController::class, 'getCategories']);
 });
-
-

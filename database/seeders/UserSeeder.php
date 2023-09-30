@@ -19,7 +19,9 @@ class UserSeeder extends Seeder
             'id' => 1,
             'full_name' => 'Admin',
             'email' => 'admin@admin.com',
-            'password' => '123456'
+            'password' => '123456',
+            'username' => 'admin',
+            'role_name' => 'admin'
         ];
 
         User::updateOrCreate(['id' => $data['id']], $data);

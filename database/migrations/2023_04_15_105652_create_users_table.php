@@ -19,12 +19,10 @@ return new class extends Migration
             $table->foreign('group_id')->references('id')->on('groups');
             $table->string('full_name');
             $table->string('email')->index()->unique();
-            $table->string('')->index()->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('username')->index()->unique();
+            $table->string('password', 256);
             $table->string('role_name', 20)->default('student');
             $table->softDeletes();
-            $table->rememberToken();
             $table->timestamps();
         });
     }

@@ -20,9 +20,14 @@ class Category extends Model
 
     protected $appends = ['parent_name'];
 
-    public function category()
+    public function children()
     {
-        return $this->hasOne(Category::class, 'id', 'parent_id');
+        return $this->hasMany(Category::class, 'parent_id');
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo(Category::class, 'parent_id');
     }
 
     public function parentName(): Attribute

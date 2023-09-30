@@ -2,9 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h5>About Admin</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, metus ac fermentum
-                    gravida, neque purus bibendum arcu, sit amet sodales lacus sem vel mauris.</p>
+                <h5>Thầy Tâm Toán</h5>
             </div>
             <div class="col-md-3">
                 <h5>Quick Links</h5>
@@ -29,7 +27,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="text-center">
-                <p>&copy; 2023 Admin Panel. All rights reserved.</p>
+                <p>&copy; 2023 ThinTQ. All rights reserved.</p>
             </div>
         </div>
     </div>

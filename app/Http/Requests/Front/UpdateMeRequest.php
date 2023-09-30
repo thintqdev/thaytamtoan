@@ -27,7 +27,7 @@ class UpdateMeRequest extends FormRequest
             'full_name' => 'max:255',
             'username' => 'max:255',
             'date_of_birth' => 'date',
-            // TODO
+
         ];
     }
 }
